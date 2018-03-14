@@ -5,7 +5,7 @@ Code for the paper Action Sets: Weakly Supervised Action Segmentation without Or
 
 * download the data from https://uni-bonn.sciebo.de/s/vVexqxzKFc6lYJx
 * extract it so that you have the `data` folder in the same directory as `main.py`
-* create a  `results` directory in the same folder: `mkdir results`
+* create a  `results` directory in the same directory where you also find `main.py`: `mkdir results`
 
 Requirements: Python2.7 with the libraries numpy, pytorch, and scipy
 
