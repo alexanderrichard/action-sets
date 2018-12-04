@@ -6,7 +6,7 @@ from torch.autograd import Variable
 import torch.utils.data
 import torch.nn as nn
 import torch.optim as optim
-from dataset import Dataset
+from .dataset import Dataset
 
 
 # wrapper class to provide videos from the dataset as pytorch tensors
@@ -82,7 +82,7 @@ class Trainer(object):
                     loss += criterion(output, labels)
                 loss.backward()
                 optimizer.step()
-            print loss
+            print(float(loss))
 
     def save_model(self, model_file):
         torch.save(self.net.state_dict(), model_file)

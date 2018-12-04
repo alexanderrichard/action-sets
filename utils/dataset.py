@@ -30,7 +30,7 @@ class Dataset(object):
             with open(base_path + '/groundTruth/' + video + '.txt') as f:
                 self.ground_truth[video] = [ label2index[line] for line in f.read().split('\n')[0:-1] ]
         # set input dimension and number of classes
-        self.input_dimension = self.features.values()[0].shape[0]
+        self.input_dimension = list(self.features.values())[0].shape[0]
         self.n_classes = len(label2index)
         self.n_frames = sum([data.shape[1] for data in self.features.values()])
 

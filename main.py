@@ -5,7 +5,7 @@ import scipy.optimize
 import random
 import argparse
 import multiprocessing as mp
-import Queue
+import queue
 from utils.dataset import Dataset
 from utils.network import Trainer, Forwarder
 from utils.grammar import PathGrammar
@@ -67,7 +67,9 @@ def train(label2index, index2label):
     with open('data/split1.train', 'r') as f:
         video_list = f.read().split('\n')[0:-1]
     # read train set
+    print('read data...')
     dataset = Dataset('data', video_list, label2index)
+    print('done')
     # train the network
     trainer = Trainer(dataset)
     trainer.train(batch_size = 512, n_epochs = 2, learning_rate = 0.1)
@@ -127,7 +129,7 @@ def decode(queue, log_probs, decoder, index2label):
                 f.write( '### Score: ###\n' + str(score) + '\n')
                 f.write( '### Frame level recognition: ###\n')
                 f.write( ' '.join( [index2label[l] for l in labels] ) + '\n' )
-        except Queue.Empty:
+        except queue.Empty:
             pass
 
 
