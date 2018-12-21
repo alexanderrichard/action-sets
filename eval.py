@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import argparse
 import glob
@@ -48,4 +48,4 @@ for filename in filelist:
     n_frames += frames
 
 # print frame accuracy (1.0 - frame error rate)
-print 'frame accuracy: %f' % (1.0 - float(n_errors) / n_frames)
+print('frame accuracy: %f' % (1.0 - float(n_errors) / n_frames))
