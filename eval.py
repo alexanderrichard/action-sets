@@ -37,7 +37,7 @@ args = parser.parse_args()
 
 filelist = glob.glob(args.recog_dir + '/P*')
 
-print 'Evaluate %d video files...' % len(filelist)
+print('Evaluate %d video files...' % len(filelist))
 
 n_frames = 0
 n_errors = 0
