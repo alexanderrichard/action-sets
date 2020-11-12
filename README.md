@@ -3,7 +3,7 @@ Code for the paper Action Sets: Weakly Supervised Action Segmentation without Or
 
 ### Prepraration:
 
-* download the data from https://uni-bonn.sciebo.de/s/vVexqxzKFc6lYJx
+* download the data from https://uni-bonn.sciebo.de/s/wOxTiWe5kfeY4Vd
 * extract it so that you have the `data` folder in the same directory as `main.py`
 * create a  `results` directory in the same directory where you also find `main.py`: `mkdir results`
 
